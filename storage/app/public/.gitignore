@@ -1,2 +1,7 @@
 *
 !.gitignore
+!img/
+!img/**
+!img/**/*
+!img/**/**
+!cancionero-eki.csv
