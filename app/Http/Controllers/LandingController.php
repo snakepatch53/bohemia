@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CategoryFood;
+use App\Models\Food;
 use App\Models\Song;
 use App\Models\SongRequest;
 use Illuminate\Http\Request;
@@ -11,6 +13,13 @@ class LandingController extends Controller
     public function home()
     {
         return inertia('landing/Home');
+    }
+
+    public function comida_menu()
+    {
+        $categories = CategoryFood::with(['foods'])->get();
+        $foods = Food::with(['category']);
+        return inertia('landing/ComidaMenu', compact('categories', 'foods'));
     }
 
     public function cancionero_cola()

@@ -28,7 +28,7 @@ export default function Home() {
                         color="#81389a"
                     />
 
-                    <Item to="/comida" name="Menu" text="¿Quieres comer?" icon={faBowlFood} color="#c32872" />
+                    <Item href={route('comida_menu')} name="Menu" text="¿Quieres comer?" icon={faBowlFood} color="#c32872" />
                     <Item
                         as="a"
                         href="https://www.facebook.com/LaBohemiaMacas"

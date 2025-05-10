@@ -33,3 +33,22 @@ export type SongT = {
     artist: string;
     gender: string;
 };
+
+export type CategoryFoodT = {
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+    foods: FoodT[];
+};
+
+export type FoodT = {
+    id: number;
+    name: string;
+    description: string;
+    price: string;
+    image: string;
+    image_url: string;
+    category_food_id: number;
+    category: CategoryFoodT;
+};

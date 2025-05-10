@@ -14,6 +14,7 @@ Route::get('/storage/{any}', function ($any) {
 })->where('any', '.*');
 
 Route::get('/', [LandingController::class, 'home'])->name('home');
+Route::get('/comida-menu', [LandingController::class, 'comida_menu'])->name('comida_menu');
 
 
 Route::prefix('cancionero')->name('cancionero.')->group(function () {
