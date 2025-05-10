@@ -18,8 +18,7 @@ class LandingController extends Controller
     public function comida_menu()
     {
         $categories = CategoryFood::with(['foods'])->get();
-        $foods = Food::with(['category']);
-        return inertia('landing/ComidaMenu', compact('categories', 'foods'));
+        return inertia('landing/ComidaMenu', compact('categories'));
     }
 
     public function cancionero_cola()

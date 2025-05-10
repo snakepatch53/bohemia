@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FoodController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\SongRequestController;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,9 @@ Route::prefix('cancionero')->name('cancionero.')->group(function () {
 
 Route::middleware(['auth', 'verified'])->prefix('dashboard')->name('dashboard.')->group(function () {
     Route::get('/', [DashboardController::class, 'home'])->name('home');
+    Route::get('/foods', [DashboardController::class, 'foods'])->name('foods');
+
+    Route::resource('/crud-foods', FoodController::class)->parameters(['crud-foods' => 'food'])->names('crud-foods')->only(['store', 'update', 'destroy']);
 });
 
 require __DIR__ . '/settings.php';
