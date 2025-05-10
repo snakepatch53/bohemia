@@ -1,3 +1,13 @@
+@font-face {
+    src: url('/storage/fonts/Arizonia-Regular.woff2') format('woff2');
+    font-family: title;
+}
+
+@font-face {
+    src: url('/storage/fonts/SourceSansPro-Regular.woff2') format('woff2');
+    font-family: title2;
+}
+
 @import 'tailwindcss';
 
 @plugin 'tailwindcss-animate';
@@ -57,6 +67,15 @@
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-ring: var(--sidebar-ring);
+
+    /* my customs */
+    --color-c1: #226e56;
+    --color-c2: #ff9803;
+    --color-c3: #2c3040;
+
+    /* fuentes */
+    --font-title: title, sans-serif;
+    --font-title2: title2, cursive;
 }
 
 /*
@@ -154,6 +173,11 @@
     }
 
     body {
-        @apply bg-background text-foreground;
+        /* @apply bg-background text-foreground; */
+        @apply text-foreground;
+    }
+
+    button {
+        @apply cursor-pointer;
     }
 }
