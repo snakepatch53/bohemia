@@ -30,7 +30,7 @@ export default function FoodMenuHeader({
                         'bg-transparent backdrop-blur-none': !isSticky,
                     })}
                 />
-                <div className="relative container flex h-full w-full flex-col items-center justify-between gap-1 p-2 lg:flex-row">
+                <div className="relative container mx-auto flex h-full w-full max-w-4xl flex-col items-center justify-between gap-1 p-2 lg:flex-row">
                     <Link href="/" className="flex h-16 lg:h-full">
                         <img className="h-full w-full" src={asset('img/info/logo.webp')} alt="Logo del bar karaoke bohemia" />
                     </Link>

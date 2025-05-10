@@ -4,4 +4,10 @@
 !img/**
 !img/**/*
 !img/**/**
-!cancionero-eki.csv
+
+!mp3/
+!mp3/**
+!mp3/**/*
+!mp3/**/**
+
+!canciones-eki.csv

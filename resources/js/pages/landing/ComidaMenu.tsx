@@ -12,7 +12,7 @@ export default function ComidaMenu({ categories }: { categories: CategoryFoodT[]
             <FoodMenuHeader categories={categories} selectedCategory={selectedCategory} onClickOption={setSelectedCategory} />
             <div className="relative px-5 py-5">
                 <div className="fixed inset-0 -z-10 opacity-30" style={{ backgroundImage: `url(${asset('img/info/background.webp')})` }} />
-                <div className="relative z-10 container mx-auto">
+                <div className="relative z-10 container mx-auto max-w-4xl">
                     <div className="grid gap-5 md:grid-cols-2">
                         {(selectedCategory?.foods || categories.reduce((acc, category) => acc.concat(category.foods), [])).map((food) => {
                             return food.description == null ? (
